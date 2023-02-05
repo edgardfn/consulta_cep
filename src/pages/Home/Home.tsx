@@ -1,16 +1,15 @@
 import { IonContent, IonHeader, IonPage } from '@ionic/react';
 import ConsultCep from '../../components/ConsultCep/ConsultCep';
 import './Home.css';
+import imageConsultCep from '../../assets/consultarcep.png';
 
 const Home: React.FC = () => {
   return (
     <IonPage>
       <IonHeader>
-        {/* <IonToolbar> */}
-          {/* <IonTitle>Consultar CEP</IonTitle> */}
-          {/* <div className='container-header'>Consultar CEP</div>
-        </IonToolbar> */}
-        <div className='container-header'>Consultar CEP</div>
+        <div className='container-header'>
+          <img src={imageConsultCep} alt="" />
+        </div>
       </IonHeader>
       <IonContent fullscreen>
         <ConsultCep />

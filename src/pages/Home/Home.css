@@ -6,4 +6,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+    font-weight: bold;
+}
+
+
+img {
+    height: 90%;
+    width: auto;
 }
