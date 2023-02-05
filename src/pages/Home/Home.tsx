@@ -8,7 +8,7 @@ const Home: React.FC = () => {
     <IonPage>
       <IonHeader>
         <div className='container-header'>
-          <img src={imageConsultCep} alt="" />
+          <img src={imageConsultCep} alt="logo-consultar-cep" />
         </div>
       </IonHeader>
       <IonContent fullscreen>

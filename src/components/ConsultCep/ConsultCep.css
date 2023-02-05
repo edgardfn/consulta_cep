@@ -22,6 +22,10 @@ form {
     width: 15rem;
 }
 
+input {
+    width: 100%;
+}
+
 strong {
     text-align: center;
 }
@@ -37,14 +41,6 @@ strong {
     background-color: #028bc9;
     font-weight: bold;
 }
-
-/* #button-submit:hover {
-    background-color: #1070a1;
-} */
-
-/* #button-submit:disabled {
-    background-color: gray;
-} */
 
 .container-address-text {
     max-width: 15rem;
