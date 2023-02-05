@@ -2,6 +2,8 @@ import { ChangeEvent, useState } from 'react';
 import './ConsultCep.css';
 import axios from 'axios';
 import { useIonAlert, useIonLoading } from '@ionic/react';
+import { IonIcon } from '@ionic/react';
+import {locateOutline} from 'ionicons/icons';
 
 interface ConsultCepProps { }
 
@@ -79,7 +81,10 @@ const ConsultCep: React.FC<ConsultCepProps> = () => {
   return (
     <div className='consultCepContainer'>
       <form onSubmit={handleCepSearch}>
-        <strong>Digite aqui o CEP:</strong>
+        <strong>
+          <IonIcon icon={locateOutline}></IonIcon>
+          Digite aqui o CEP:
+        </strong>
         <label>
             <input 
               name="cep" 
