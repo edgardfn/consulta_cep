@@ -34,7 +34,7 @@ const Menu: React.FC = () => {
 
                 <IonRouterOutlet id='main'>
                     <Route exact path='/' component={Home} />
-                    <Route exact path='/history' component={History} />
+                    <Route path='/history' component={History} />
                 </IonRouterOutlet>
             </IonSplitPane>
         </IonPage>

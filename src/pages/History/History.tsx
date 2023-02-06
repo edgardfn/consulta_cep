@@ -13,7 +13,7 @@ const History: React.FC = () => {
       <IonHeader>
         <div id='container-header'>
           <IonButtons slot='start' id='container-icon'>
-            <IonMenuButton id='button-menu' autoHide={false}></IonMenuButton>
+            <IonMenuButton id='button-menu'></IonMenuButton>
           </IonButtons>
           <IonImg src={imageConsultCep} alt="logo-consultar-cep" />
         </div>
