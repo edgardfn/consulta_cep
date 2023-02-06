@@ -3,12 +3,15 @@ import { createRoot } from 'react-dom/client';
 import App from './App';
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 import reportWebVitals from './reportWebVitals';
+import SearchCeps, { SearchCepsContextProvider } from './providers/SearchCeps';
 
 const container = document.getElementById('root');
 const root = createRoot(container!);
 root.render(
   <React.StrictMode>
-    <App />
+    <SearchCepsContextProvider>
+      <App />
+    </SearchCepsContextProvider>
   </React.StrictMode>
 );
 

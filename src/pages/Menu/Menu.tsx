@@ -3,10 +3,7 @@ import { homeOutline, listCircleOutline } from 'ionicons/icons';
 import { Route } from 'react-router';
 import History from '../History/History';
 import Home from '../Home/Home';
-// import ConsultCep from '../../components/ConsultCep/ConsultCep';
-// import './Home.css';
 import './Menu.css';
-// import imageConsultCep from '../../assets/consultarcep.png';
 
 const Menu: React.FC = () => {
     const paths = [

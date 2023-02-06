@@ -1,10 +1,11 @@
-import { ChangeEvent, useState } from 'react';
+import { ChangeEvent, useContext, useState } from 'react';
 import './ConsultCep.css';
 import axios from 'axios';
 import { useIonAlert, useIonLoading } from '@ionic/react';
 import { IonIcon } from '@ionic/react';
 import {locateOutline, copyOutline} from 'ionicons/icons';
 import {Clipboard} from '@capacitor/clipboard';
+import { SearchCepsContext } from '../../providers/SearchCeps';
 
 interface ConsultCepProps { }
 
@@ -21,6 +22,8 @@ const ConsultCep: React.FC<ConsultCepProps> = () => {
   const [cep, SetCep] = useState<string>('')
   const [error, setError] = useState<string>('')
   const [addres, setAddress] = useState<string>('')
+
+  const { createNewSearchCep } = useContext(SearchCepsContext)
 
   const [presentAlert] = useIonAlert();
   const [present, dismiss] = useIonLoading();
@@ -49,6 +52,7 @@ const ConsultCep: React.FC<ConsultCepProps> = () => {
   const mountAddress = (response:ResponseApiData) => {
     let stringAddress = `${response.logradouro}, ${response.bairro}, ${response.localidade}/${response.uf}, ${response.cep}`
     setAddress(stringAddress)
+    createNewSearchCep(response.cep)
     SetCep('')
   }  
   const handleCepSearch = (event:any) => {

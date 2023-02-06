@@ -1,4 +1,4 @@
-import { IonButtons, IonContent, IonHeader, IonImg, IonMenuButton, IonPage, IonTitle, IonToolbar } from '@ionic/react';
+import { IonButtons, IonContent, IonHeader, IonImg, IonMenuButton, IonPage } from '@ionic/react';
 import ConsultCep from '../../components/ConsultCep/ConsultCep';
 import './Home.css';
 import imageConsultCep from '../../assets/consultarcep.png';
@@ -7,14 +7,12 @@ const Home: React.FC = () => {
   return (
     <IonPage>
       <IonHeader>
-        <IonToolbar id='container-header'>
+        <div id='container-header'>
           <IonButtons slot='start' id='container-icon'>
             <IonMenuButton id='button-menu' autoHide={false}></IonMenuButton>
           </IonButtons>
-          <IonTitle>
-            <IonImg src={imageConsultCep} alt="logo-consultar-cep" />
-          </IonTitle>
-        </IonToolbar>
+          <IonImg src={imageConsultCep} alt="logo-consultar-cep" />
+        </div>
       </IonHeader>
       <IonContent fullscreen>
         <ConsultCep />

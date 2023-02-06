@@ -1,19 +1,21 @@
-import { IonButtons, IonContent, IonHeader, IonImg, IonMenuButton, IonPage, IonTitle, IonToolbar } from '@ionic/react';
+import { IonButtons, IonContent, IonHeader, IonImg, IonMenuButton, IonPage } from '@ionic/react';
 import './History.css';
 import imageConsultCep from '../../assets/consultarcep.png';
+import { useContext } from 'react';
+import { SearchCepsContext} from '../../providers/SearchCeps';
 
 const History: React.FC = () => {
+  const {SearchCeps} = useContext(SearchCepsContext)
+  
   return (
     <IonPage>
       <IonHeader>
-        <IonToolbar id='container-header'>
+        <div id='container-header'>
           <IonButtons slot='start' id='container-icon'>
             <IonMenuButton id='button-menu' autoHide={false}></IonMenuButton>
           </IonButtons>
-          <IonTitle>
-            <IonImg src={imageConsultCep} alt="logo-consultar-cep" />
-          </IonTitle>
-        </IonToolbar>
+          <IonImg src={imageConsultCep} alt="logo-consultar-cep" />
+        </div>
       </IonHeader>
       <IonContent fullscreen>
         <table>
