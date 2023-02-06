@@ -1,41 +1,49 @@
 <h4 align="center"> 
-	🚧 Consulta CEP 1.0 🚀 em construção... 🚧
+	Consulta CEP 1.0
 </h4>
 
 [![NPM](https://img.shields.io/npm/l/react)](https://github.com/edgardfn/consulta_cep/blob/main/license) 
 
 ## 💻 Sobre o projeto
 
-Consulta CEP - é um sistema de consultas de CEP.
+Consulta CEP - é um sistema de aplicativo consultas de CEP, que utiliza a API [ViaCEP] para trazer o endereço completo de acordo com o CEP digitado, possui a funcionalidade de copiar o endereço para a área de transferência do device e também foi construido um menu lateral com a opção também de visualizar o histórico dos ceps e data e hora pesquisados.
 
 ## 🎨 Layout
+
+### Mobile
+
 
 
 ## 🛠 Tecnologias
 
+As seguintes ferramentas foram usadas na construção do projeto:
 
-## 🚀 Como executar o projeto
+- [Ionic v06]
+- [React]
+- [Typescript]
+- [Axios]
+- [Context API]
+- [Date-fns]
 
-### Pré-requisitos
+## 🚀 Pré-requisitos
 
 Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
-[Git](https://git-scm.com), [Node.js][nodejs]. 
+[Git](https://git-scm.com), [Node.js][nodejs] e NPM.
 Além disto é bom ter um editor para trabalhar com o código como [VSCode][vscode]
 
 ```bash
 # Clone este repositório
 $ git clone https://github.com/edgardfn/consulta_cep.git
 
-# Acesse a pasta raiz do projeto no seu terminal/cmd
-$ cd consulta_cep
-
 # Instale as dependências
 $ npm install
 
-# Execute a aplicação em modo de desenvolvimento
-$ npm run start
-
-# A aplicação será aberta na porta:3000 - acesse http://localhost:3000
+# Inicie o serviço do Ionic:
+$ ionic serve
+ou
+$ ionic capacitor add android
+$ ionic capacitor build android 
+$ ionic capacitor run android
 ```
 
 ## 📝 Licença
@@ -47,7 +55,7 @@ Feito com ❤️ por Edgard Finotti Neto 👋🏽 [Entre em contato!](https://ww
 [nodejs]: https://nodejs.org/
 [Typescript]: https://www.typescriptlang.org/
 [expo]: https://expo.io/
-[reactjs]: https://reactjs.org
+[React]: https://reactjs.org
 [rn]: https://facebook.github.io/react-native/
 [yarn]: https://yarnpkg.com/
 [vscode]: https://code.visualstudio.com/
@@ -60,3 +68,8 @@ Feito com ❤️ por Edgard Finotti Neto 👋🏽 [Entre em contato!](https://ww
 [React Router DOM]:https://github.com/remix-run/react-router
 [React Hook Form]:https://github.com/react-hook-form/react-hook-form
 [Validação de Formulários com Biblioteca Zod]:https://github.com/colinhacks/zod
+[ViaCEP]:https://viacep.com.br/
+[Ionic v06]:https://ionicframework.com/docs/
+[Axios]:https://github.com/axios/axios
+[Context API]: https://reactjs.org/docs/context.html
+[Date-fns]: https://github.com/date-fns/date-fns
