@@ -3,7 +3,8 @@ import './ConsultCep.css';
 import axios from 'axios';
 import { useIonAlert, useIonLoading } from '@ionic/react';
 import { IonIcon } from '@ionic/react';
-import {locateOutline} from 'ionicons/icons';
+import {locateOutline, copyOutline} from 'ionicons/icons';
+import {Clipboard} from '@capacitor/clipboard';
 
 interface ConsultCepProps { }
 
@@ -25,6 +26,17 @@ const ConsultCep: React.FC<ConsultCepProps> = () => {
   const [present, dismiss] = useIonLoading();
 
   const isCepEmpty = cep.length < 9;
+
+ 
+  const handleCopyAddresToTransferArea = async () => {
+    present({
+      message: 'Copiando...',
+    })
+    await Clipboard.write({
+      string: addres
+    });
+    dismiss()
+  };
 
   const maskCEP = (value:string) => {
     return value.replace(/\D/g, "").replace(/^(\d{5})(\d{3})+?$/, "$1-$2");
@@ -103,7 +115,17 @@ const ConsultCep: React.FC<ConsultCepProps> = () => {
       </form>
 
       <div className='container-search-address'>
-        {showContainerSearchAddress ? <div className='container-address-text'>{addres}</div> : null}
+        {showContainerSearchAddress ? 
+          <>
+            <div className='container-address-text'>
+              {addres}
+            </div> 
+            <div className='container-icon-copy'>
+              <IonIcon id='icon-copy-data' icon={copyOutline} size='large' onClick={handleCopyAddresToTransferArea}></IonIcon>
+            </div>
+          </>
+          : null
+        }
       </div>
     </div>
   );

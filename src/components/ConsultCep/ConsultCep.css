@@ -53,7 +53,18 @@ strong {
     text-align: center;
 }
 
+.container-icon-copy {
+    width: 15rem;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: whitesmoke;
+    padding: 0.5rem;
+}
+
 .container-search-address {
     width: 90%;
 }
+
 
