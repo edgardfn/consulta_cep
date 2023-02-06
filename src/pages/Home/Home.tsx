@@ -9,7 +9,7 @@ const Home: React.FC = () => {
       <IonHeader>
         <div id='container-header'>
           <IonButtons slot='start' id='container-icon'>
-            <IonMenuButton id='button-menu'></IonMenuButton>
+            <IonMenuButton id='button-menu' autoHide={false}></IonMenuButton>
           </IonButtons>
           <IonImg src={imageConsultCep} alt="logo-consultar-cep" />
         </div>
