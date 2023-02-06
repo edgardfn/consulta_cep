@@ -1,4 +1,4 @@
-.container-header{
+/* .container-header{
     background-color: #f7d81f;
     height: 3rem;
     width: 100%;
@@ -8,10 +8,30 @@
     justify-content: center;
 
     font-weight: bold;
-}
+} */
 
 
-img {
-    height: 90%;
-    width: auto;
+ion-img {
+    height: 50px;
+    /* padding: 4px 0; */
 }
+
+.title-default {
+    background-color: #f7d81f;
+}
+
+/* ion-img {
+    width: 12%;
+} */
+
+/* ion-buttons {
+    font-size: 50px !important; 
+    width: 100% !important; 
+    height: 100% !important; 
+}
+
+ion-menu-button {
+    font-size: 50px !important;
+    color: black;
+    height: 100%;
+} */

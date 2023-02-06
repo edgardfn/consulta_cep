@@ -1,9 +1,8 @@
 import { IonButtons, IonContent, IonHeader, IonImg, IonMenuButton, IonPage, IonTitle, IonToolbar } from '@ionic/react';
-import ConsultCep from '../../components/ConsultCep/ConsultCep';
-import './Home.css';
+import './History.css';
 import imageConsultCep from '../../assets/consultarcep.png';
 
-const Home: React.FC = () => {
+const History: React.FC = () => {
   return (
     <IonPage>
       <IonHeader>
@@ -17,10 +16,25 @@ const Home: React.FC = () => {
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>
-        <ConsultCep />
+        <table>
+          <thead>
+            <tr>
+              <th>CEP</th>
+              <th>Data</th>
+              <th>Hora</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>13184-674</td>
+              <td>06/02/2023</td>
+              <td>03:30</td>
+            </tr>
+          </tbody>
+        </table>
       </IonContent>
     </IonPage>
   );
 };
 
-export default Home;
+export default History;
