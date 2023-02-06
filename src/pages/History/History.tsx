@@ -3,6 +3,7 @@ import './History.css';
 import imageConsultCep from '../../assets/consultarcep.png';
 import { useContext } from 'react';
 import { SearchCepsContext} from '../../providers/SearchCeps';
+import {format} from 'date-fns';
 
 const History: React.FC = () => {
   const {SearchCeps} = useContext(SearchCepsContext)
@@ -22,16 +23,20 @@ const History: React.FC = () => {
           <thead>
             <tr>
               <th>CEP</th>
-              <th>Data</th>
+              <th>Dia</th>
               <th>Hora</th>
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td>13184-674</td>
-              <td>06/02/2023</td>
-              <td>03:30</td>
-            </tr>
+            {SearchCeps.ceps.map((item) => {
+              return (
+                <tr key={item.id}>
+                  <td>{item.cep}</td>
+                  <td>{format(item.date, "dd/MM/yyyy")}</td>
+                  <td>{format(item.date, "HH:mm")}</td>
+                </tr>
+              )
+            })}
           </tbody>
         </table>
       </IonContent>

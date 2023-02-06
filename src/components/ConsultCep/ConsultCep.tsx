@@ -64,7 +64,6 @@ const ConsultCep: React.FC<ConsultCepProps> = () => {
     const formattedStringWithoutCharacter = cep.replace('-', '');
 
     axios.get(`https://viacep.com.br/ws/${formattedStringWithoutCharacter}/json/`).then((response) => {
-      console.log(response.data);
       if('erro' in response.data) {
         dismiss()
         presentAlert({
