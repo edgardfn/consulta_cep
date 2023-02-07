@@ -4,6 +4,10 @@
 
 [![NPM](https://img.shields.io/npm/l/react)](https://github.com/edgardfn/consulta_cep/blob/main/license) 
 
+## Download APK:
+
+https://drive.google.com/drive/folders/1qtFHmN63joml-LP1xp007eac0Zv4SUnm?usp=share_link
+
 ## 💻 Sobre o projeto
 
 Consulta CEP - é um sistema de aplicativo consultas de CEP, que utiliza a API [ViaCEP] para trazer o endereço completo de acordo com o CEP digitado, possui a funcionalidade de copiar o endereço para a área de transferência do device e também foi construido um menu lateral com a opção também de visualizar o histórico dos ceps e data e hora pesquisados.
@@ -11,6 +15,14 @@ Consulta CEP - é um sistema de aplicativo consultas de CEP, que utiliza a API [
 ## 🎨 Layout
 
 ### Mobile
+<p align="center">
+ <img alt="" title="imagem06" src="./src/assets/imagem06.jpeg" width="300px">
+ <img alt="" title="imagem05" src="./src/assets/imagem05.jpeg" width="300px">
+ <img alt="" title="imagem04" src="./src/assets/imagem04.jpeg" width="300px">
+ <img alt="" title="imagem03" src="./src/assets/imagem03.jpeg" width="300px">
+ <img alt="" title="imagem02" src="./src/assets/imagem02.jpeg" width="300px">
+ <img alt="" title="imagem01" src="./src/assets/imagem01.jpeg" width="300px">
+</p>
 
 
 
@@ -73,3 +85,4 @@ Feito com ❤️ por Edgard Finotti Neto 👋🏽 [Entre em contato!](https://ww
 [Axios]:https://github.com/axios/axios
 [Context API]: https://reactjs.org/docs/context.html
 [Date-fns]: https://github.com/date-fns/date-fns
+
