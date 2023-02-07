@@ -1,4 +1,4 @@
-import { Route } from 'react-router-dom';
+import { Redirect, Route } from 'react-router-dom';
 import { IonApp, IonRouterOutlet, setupIonicReact } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
 import Home from './pages/Home/Home';
@@ -31,9 +31,10 @@ const App: React.FC = () => (
   <IonApp>
     <IonReactRouter>
       <IonRouterOutlet>
-        <Route exact path="/" component={Home}/>
-        <Route path="/" component={Menu}/>
-        <Route exact path="/history" component={History}/>
+        <Route path="/app/home" component={Home}/>
+        <Route exact path="/app/history" component={History}/>
+        <Route path="/app" component={Menu}/>
+        <Redirect from="/" to="/app" exact />
       </IonRouterOutlet>
     </IonReactRouter>
   </IonApp>
